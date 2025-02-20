@@ -21,7 +21,7 @@ const About = () => {
         >DERMOLAHU DRAUGHTMANSHIP & CONSTRUCTION WORKS
        </motion.h1>
         <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-        <p className='text-3xl italic text-gray-50 mt-[60px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, sequi.</p>
+        <p className='text-3xl italic text-gray-50 mt-[60px]'>Your trusted partner in architectural design, construction, and land development. We transform visions into reality with precision, innovation, and excellence.</p>
       </motion.div>
 
       <motion.div
@@ -30,7 +30,15 @@ const About = () => {
       variants={slideUpVariants}
       className='lg:w-[40%] w-full flex flex-col justify-center items-start lg:gap-6'
       >
-       <p className='text-white text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nobis quae hic delectus cumque veritatis blanditiis maiores consequuntur vero dolorem, quidem optio omnis maxime fugiat amet nisi perferendis exercitationem. Quo consequatur facilis, dolore obcaecati ducimus recusandae tenetur quidem illo explicabo minima veritatis, dolores molestias earum a optio blanditiis nemo animi unde atque! In nobis ipsam quod rem ea, magni, amet dolores ullam incidunt beatae commodi quos. Eveniet, impedit recusandae? Corporis soluta magni, libero, cum natus reiciendis voluptates ab nostrum consequuntur eaque vero fuga optio, consectetur magnam porro distinctio quis quaerat maiores! Eum deserunt atque corrupti expedita sint esse sequi fuga!</p>
+       <p className='text-white text-2xl text-justify'>At Dermolahu Draughtmanship & Construction Works, we bring expertise and innovation to the construction industry. Our company specializes in architectural and building drawings, construction works, land surveying, and cost estimation to help bring your projects to life with precision and efficiency.
+
+Beyond construction, we provide comprehensive consultancy services for building permits, soil testing, environmental and fire safety certifications, planning schemes, land acquisition, and registration—ensuring your projects meet all regulatory standards.
+
+We also offer AutoCAD training for professionals and students looking to master architectural and structural design tools.
+
+With a strong commitment to quality, safety, and customer satisfaction, we aim to deliver exceptional building solutions tailored to your needs. Whether you're starting a new construction project, need expert guidance, or require premium building materials, we are your trusted partner every step of the way.
+
+</p>
        <motion.button
         variants={zoomInVariants}
         className='bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black'>

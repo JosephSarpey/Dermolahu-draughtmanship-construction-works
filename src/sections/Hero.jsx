@@ -23,7 +23,7 @@ const Hero = () => {
   >Quality of work is our priority
 </motion.h1>
 <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-<p className='text-white text-[20px] '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, illum excepturi? Nobis, facere! Obcaecati soluta, facilis eveniet sunt expedita voluptatibus quidem accusantium excepturi est, assumenda laboriosam nihil enim voluptatum repudiandae.</p>
+<p className='text-white text-[20px] '>At Demorlahu Construction, we pride ourselves on delivering top-notch construction services with a focus on quality and customer satisfaction. Our team of experienced professionals is dedicated to bringing your vision to life, whether it's a residential project or a commercial development. We use the latest technology and sustainable practices to ensure every project is completed on time and within budget. Trust us to handle your construction needs with precision and care. Your dream project is our priority.</p>
 <motion.div
 initial="hidden"
 whileInView="visible"
