@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { motion } from 'framer-motion'
@@ -18,7 +19,7 @@ const About = () => {
         <motion.h1
         variants={slideUpVariants}
         className='text-white uppercase text-[40px] font-bold'
-        >DERMOLAHU DRAUGHTMANSHIP & CONSTRUCTION WORKS
+        >DEMOLAHU DRAUGHTMANSHIP & CONSTRUCTION LTD.
        </motion.h1>
         <div className='w-[120px] h-[6px] bg-yellow-500'></div>
         <p className='text-3xl italic text-gray-50 mt-[60px]'>Your trusted partner in architectural design, construction, and land development. We transform visions into reality with precision, innovation, and excellence.</p>
@@ -30,7 +31,7 @@ const About = () => {
       variants={slideUpVariants}
       className='lg:w-[40%] w-full flex flex-col justify-center items-start lg:gap-6'
       >
-       <p className='text-white text-2xl text-justify'>At Dermolahu Draughtmanship & Construction Works, we bring expertise and innovation to the construction industry. Our company specializes in architectural and building drawings, construction works, land surveying, and cost estimation to help bring your projects to life with precision and efficiency.
+       <p className='text-white text-2xl text-justify'>At Demolahu Draughtmanship & Construction Works, we bring expertise and innovation to the construction industry. Our company specializes in architectural and building drawings, construction works, land surveying, and cost estimation to help bring your projects to life with precision and efficiency.
 
 Beyond construction, we provide comprehensive consultancy services for building permits, soil testing, environmental and fire safety certifications, planning schemes, land acquisition, and registration—ensuring your projects meet all regulatory standards.
 
