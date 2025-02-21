@@ -73,7 +73,7 @@ const DetailedAbout = () => {
         <h2 className='text-white text-3xl font-bold mb-[40px]'>Meet Our Team</h2>
         <div className='flex flex-wrap justify-between items-start gap-[30px]'>
           <div className='w-[300px] flex flex-col items-center'>
-            <img src='src/assets/ceo_profile.png' alt='Staff Member 1' className='w-full h-auto rounded-full' />
+            <img src='/src/assets/ceo_profile.png' alt='Staff Member 1' className='w-full h-auto rounded-full' />
             <h3 className='text-yellow-500 text-xl mt-[20px]'>Engr. Kenneth Cudjoe</h3>
             <p className='text-white text-lg text-center'>Chief Executive Officer</p>
           </div>
@@ -83,7 +83,7 @@ const DetailedAbout = () => {
             <p className='text-white text-lg text-center'>Assistant Managing Director</p>
           </div>
           <div className='w-[300px] flex flex-col items-center'>
-            <img src='/path/to/image3.jpg' alt='Staff Member 3' className='w-full h-auto rounded-full' />
+            <img src='../assets/image3.jpg' alt='Staff Member 3' className='w-full h-auto rounded-full' />
             <h3 className='text-yellow-500 text-xl mt-[20px]'>Michael Brown</h3>
             <p className='text-white text-lg text-center'>Project Manager</p>
           </div>
