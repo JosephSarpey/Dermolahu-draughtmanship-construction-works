@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { FaXmark, FaBars } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import logo from '/assets/logo.jpg' // Adjust the path to your logo image
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +26,12 @@ const Header = () => {
 
   return (
     <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50'>
-      <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu
-      <span className='text-yellow-500 italic'> Draughtsmanship & Construction Ltd</span></h1>
+      <div className='flex items-center'>
+
+        <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu
+        <span className='text-yellow-500 italic'> Draughtsmanship & Construction Ltd</span></h1>
+        <img src={logo} alt='Logo' className='h-20 w-24 mr-3' /> {/* Adjust the size as needed */}
+      </div>
 
       <ul className='lg:flex justify-center items-center gap-6 hidden'>
         {navItems.map(({ link, path }) => (

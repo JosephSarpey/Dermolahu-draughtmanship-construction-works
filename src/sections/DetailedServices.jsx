@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
+import Footer from './Footer';
 import { slideUpVariants, zoomInVariants } from './animation';
 
 // Update the services array to include detailed descriptions and image URLs
@@ -126,6 +127,7 @@ const DetailedServices = () => {
           <p className='text-[18px] text-gray-700'>Location: Agona Nkwanta (Damtse Junction)</p>
         </motion.div>
       </motion.div>
+      <Footer />
     </div>
   );
 };

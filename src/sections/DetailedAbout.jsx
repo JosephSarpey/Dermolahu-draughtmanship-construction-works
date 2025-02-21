@@ -3,12 +3,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Header from './Header'
+import Footer from './Footer'
 import { slideUpVariants, zoomInVariants } from './animation'
 import { planning } from '../export'
 
 const DetailedAbout = () => {
   return (
-    <div className='w-full background-color: rgb(45, 42, 42)'> {/* Set background to dark */}
+    <div className='w-full background-color: rgb(45, 42, 42)'>
       <Header />
       <div className='lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-start gap-[50px]' id='about'>
         <motion.div
@@ -70,7 +71,6 @@ const DetailedAbout = () => {
         </p>
       </div>
 
-      {/* Insert Working Section Here */}
       <div id='working' className='w-full bg-white'>
         <motion.div
           initial="hidden"
@@ -85,7 +85,6 @@ const DetailedAbout = () => {
             className='w-[120px] h-[6px] bg-yellow-500'
           ></motion.div>
 
-          {/* make div for services mapping from export js file */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -127,6 +126,7 @@ const DetailedAbout = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

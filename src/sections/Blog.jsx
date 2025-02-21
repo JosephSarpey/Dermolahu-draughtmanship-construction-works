@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Header from './Header'
+import Footer from './Footer'
 import { slideUpVariants, zoomInVariants } from './animation'
 
 const Blog = () => {
@@ -58,6 +59,7 @@ const Blog = () => {
           ))}
         </motion.div>
       </motion.div>
+      <Footer />
     </div>
   )
 }

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faTwitter, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Header from './Header'
+import Footer from './Footer'
 import { slideUpVariants, zoomInVariants } from './animation'
 
 const DetailedContact = () => {
@@ -162,6 +163,7 @@ const DetailedContact = () => {
           </motion.form>
         </motion.div>
       </div>
+      <Footer />
     </div>
   )
 }

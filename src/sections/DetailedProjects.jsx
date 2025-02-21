@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Header from './Header'
+import Footer from './Footer'
 import project1 from '../assets/project1.jpg'
 import project2 from '../assets/project2.jpg'
 import project3 from '../assets/project3.jpg'
@@ -45,6 +46,7 @@ const DetailedProjects = () => {
           <img src={project8} alt="project image" className='h-[250px] w-full' />
         </motion.div>
       </motion.div>
+      <Footer />
     </div>
   )
 }
