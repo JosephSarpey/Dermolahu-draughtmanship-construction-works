@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { FaCopyright, FaArrowUp, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaArrowUp, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -51,9 +51,13 @@ const Footer = () => {
           </div>
         </div>
 
+        <hr className='my-4 border-gray-600' />
+
         <div className='flex justify-center items-center gap-2 mt-10'>
-          <FaCopyright className='fill-yellow-500 lg:size-5 size-8' />
-          <p className='text-lg text-center'>Copyright 2025, DERMOLAHU DRAUGHTMANSHIP & CONSTRUCTION WORKS, All Rights Reserved</p>
+          <p className='text-lg text-center'>&copy; 2025, DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION WORKS, All Rights Reserved</p>
+        </div>
+        <div className='flex justify-center items-center gap-2 mt-10'>
+        <p className='text-lg text-center'>Powered By J & K Technologies</p>
         </div>
       </div>
 

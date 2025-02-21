@@ -25,41 +25,42 @@ const Header = () => {
   ]
 
   return (
-    <nav className='w-full flex bg-white justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50'>
-      <div className='flex items-center'>
-
-        <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu
-        <span className='text-yellow-500 italic'> Draughtsmanship & Construction Ltd</span></h1>
-        <img src={logo} alt='Logo' className='h-20 w-24 mr-3' /> {/* Adjust the size as needed */}
-      </div>
-
-      <ul className='lg:flex justify-center items-center gap-6 hidden'>
-        {navItems.map(({ link, path }) => (
-          <li key={path}>
-            <Link className='text-black uppercase font-bold cursor-pointer p-3 rounded-full hover:bg-yellow-500 hover:text-black text-[15px]' to={path}>{link}</Link>
-          </li>
-        ))}
-      </ul>
-
-      <button className='bg-yellow-500 hover:bg-black hover:text-white text-black px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>BOOK NOW</button>
-
-      {/* mobile menu starts here */}
-      <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>
-        <div>
-          {isMenuOpen ? <FaXmark className='text-yellow-500 text-3xl cursor-pointer' /> : <FaBars className='text-yellow-500 text-3xl cursor-pointer' />}
+    <header className='w-full flex flex-col items-center bg-white sticky top-0 z-50'>
+      <img src={logo} alt='Logo' className='h-30 w-24 mb-3' /> {/* Adjust the size as needed */}
+      <nav className='w-full flex justify-between items-center gap-1 lg:px-16 px-6 py-4'>
+        <div className='flex items-center'>
+          <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu
+          <span className='text-yellow-500 italic'> Draughtsmanship & Construction Ltd</span></h1>
         </div>
-      </div>
 
-      <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-yellow-500 p-4 absolute top-[72px] left-0`} onClick={closeMenu}>
-        <ul className='flex flex-col justify-center items-center gap-2 w-full'>
+        <ul className='lg:flex justify-center items-center gap-6 hidden'>
           {navItems.map(({ link, path }) => (
             <li key={path}>
-              <Link className='text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center' to={path}>{link}</Link>
+              <Link className='text-black uppercase font-bold cursor-pointer p-3 rounded-full hover:bg-yellow-500 hover:text-black text-[15px]' to={path}>{link}</Link>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+
+        <button className='bg-yellow-500 hover:bg-black hover:text-white text-black px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>BOOK NOW</button>
+
+        {/* mobile menu starts here */}
+        <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>
+          <div>
+            {isMenuOpen ? <FaXmark className='text-yellow-500 text-3xl cursor-pointer' /> : <FaBars className='text-yellow-500 text-3xl cursor-pointer' />}
+          </div>
+        </div>
+
+        <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-yellow-500 p-4 absolute top-[72px] left-0`} onClick={closeMenu}>
+          <ul className='flex flex-col justify-center items-center gap-2 w-full'>
+            {navItems.map(({ link, path }) => (
+              <li key={path}>
+                <Link className='text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center' to={path}>{link}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </header>
   )
 }
 
