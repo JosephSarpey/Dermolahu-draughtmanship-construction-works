@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
+ /* eslint-disable no-unused-vars */
 import React from 'react'
 import { motion } from 'framer-motion'
 import { slideUpVariants, zoomInVariants } from './animation'
@@ -14,8 +13,8 @@ const Working = () => {
         variants={slideUpVariants}
         className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
       >
-        <motion.h1 variants={slideUpVariants} className='text-yellow-500 text-2xl'>STEP BY STEP</motion.h1>
-        <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>HOW IT'S WORKING</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-yellow-500 text-2xl'>A SYSTEMATIC APPROACH</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>HOW OUR EXPERT ENGINEERS WORK</motion.h1>
         <motion.div
           variants={slideUpVariants}
           className='w-[120px] h-[6px] bg-yellow-500'

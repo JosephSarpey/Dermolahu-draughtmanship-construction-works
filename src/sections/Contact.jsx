@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import { motion } from 'framer-motion'
-import { slideUpVariants, zoomInVariants } from './animation'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { slideUpVariants, zoomInVariants } from './animation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -38,27 +41,20 @@ const Contact = () => {
           variants={slideUpVariants}
           className='lg:w-[40%] w-full flex flex-col justify-center items-start lg:gap-6'
         >
-          <motion.form
-            initial="hidden"
-            whileInView="visible"
+          <motion.button
             variants={zoomInVariants}
-            className='flex flex-col justify-center items-start gap-6 w-full'
+            className='bg-yellow-500 hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full flex items-center justify-center'
           >
-            <input type='text' placeholder='Enter Full Name' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
-            <input type='email' placeholder='Enter Email' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
-            <input type='number' placeholder='Enter Mobile Number' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
-            <textarea name="" placeholder='Enter Your Message' rows="4" className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full'></textarea>
-            <motion.button
-              variants={zoomInVariants}
-              className='bg-yellow-500 hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full'
-            >
-              SUBMIT
-            </motion.button>
-          </motion.form>
+            <Link to="/contact" className='flex items-center'>
+              <FontAwesomeIcon icon={faEnvelope} className='mr-2' />
+              <FontAwesomeIcon icon={faPhone} className='mr-2' />
+              CONTACT US
+            </Link>
+          </motion.button>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

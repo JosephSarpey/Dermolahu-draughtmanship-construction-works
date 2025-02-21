@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
@@ -8,6 +9,7 @@ import Working from './sections/Working'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import DetailedContact from './sections/DetailedContact';
 
 const App = () => {
   return (
