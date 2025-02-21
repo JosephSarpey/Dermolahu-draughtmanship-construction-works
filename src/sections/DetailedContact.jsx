@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Header from './Header'
 import { slideUpVariants, zoomInVariants } from './animation'
 
@@ -80,17 +80,20 @@ const DetailedContact = () => {
           <div className='mt-[40px]'>
             <h2 className='text-2xl font-bold'>Follow Us</h2>
             <div className='flex mt-4 gap-4'>
-              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+              <a href='https://www.facebook.com/share/r/19xwCNKL9j/' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faFacebook} className='text-2xl text-yellow-500 hover:text-black' />
               </a>
               <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faTwitter} className='text-2xl text-yellow-500 hover:text-black' />
               </a>
-              <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+              <a href='https://www.instagram.com/demolahu_engineering.kenjack?utm_source=qr&igsh=anBoeTVlZW1lejd1' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faInstagram} className='text-2xl text-yellow-500 hover:text-black' />
               </a>
               <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faLinkedin} className='text-2xl text-yellow-500 hover:text-black' />
+              </a>
+              <a href='https://wa.me/+233249308701' target='_blank' rel='noopener noreferrer'>
+                <FontAwesomeIcon icon={faWhatsapp} className='text-2xl text-yellow-500 hover:text-black' />
               </a>
             </div>
           </div>
