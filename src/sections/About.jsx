@@ -18,7 +18,7 @@ const About = () => {
         <motion.h1
         variants={slideUpVariants}
         className='text-white uppercase text-[35px] font-bold'
-        >DEMOLAHU DRAUGHTMANSHIP & CONSTRUCTION LTD.
+        >DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD.
        </motion.h1>
         <div className='w-[120px] h-[6px] bg-yellow-500'></div>
         <p className='text-3xl italic text-gray-50 mt-[60px]'>Your trusted partner in architectural design, construction, and land development. We transform visions into reality with precision, innovation, and excellence.</p>

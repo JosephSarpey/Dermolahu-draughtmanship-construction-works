@@ -18,7 +18,7 @@ const Blog = () => {
     },
     {
       title: "How to Choose the Right Contractor",
-      date: "March 10, 2025",
+      date: "February, 2025",
       content: "Choosing the right contractor is crucial for the success of your project. Here are some tips to help you make an informed decision."
     }
   ]

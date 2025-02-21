@@ -151,8 +151,14 @@ const DetailedContact = () => {
             >
               <FontAwesomeIcon icon={faPaperPlane} />
               SUBMIT
-            </motion.button>
+            </motion.button>           
             {formStatus && <p className='mt-4 text-red-500'>{formStatus}</p>}
+            
+            <p className='text-m text-gray-600 mt-4'>
+              We respect your privacy. Your information is safe and will never be shared. 
+              By submitting this form, you agree to our terms and conditions.
+              We would love to hear from you, our cherished customer.
+            </p>
           </motion.form>
         </motion.div>
       </div>
