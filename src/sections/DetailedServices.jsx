@@ -10,12 +10,12 @@ const services = [
   { 
     title: 'BUILDING/ARCHITECTURAL DRAWINGS', 
     about: 'We provide professional building and architectural drawings that meet industry standards. Our team of experienced architects ensures that every detail is meticulously planned and executed. Whether you need residential, commercial, or industrial designs, we have the expertise to deliver. Our drawings are precise, detailed, and tailored to your specific needs. Trust us to bring your vision to life with accuracy and creativity.', 
-    image: 'path/to/image1.jpg' 
+    image: '/assets/archit_drawing.jpg' 
   },
   { 
     title: 'CONSTRUCTION WORKS', 
     about: 'Our construction services are of the highest quality, ensuring that your project is completed on time and within budget. We handle all aspects of construction, from foundation to finishing. Our team of skilled professionals uses the latest techniques and materials to deliver durable and aesthetically pleasing structures. We prioritize safety, efficiency, and client satisfaction in every project we undertake. Let us build your dream project with precision and care.', 
-    image: '/src/assets/construction_works.jpg' 
+    image: '/assets/construction_works.jpg' 
   },
   { 
     title: 'LAND SURVEYING', 
