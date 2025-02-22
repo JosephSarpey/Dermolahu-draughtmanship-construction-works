@@ -91,25 +91,25 @@ export const planning = [
     icon: IoDocumentTextSharp,
     title: "PLANNING",
     about:
-      "Strategic planning is crucial in every construction project. We analyze requirements, assess risks, and develop structured plans to ensure smooth execution.",
+      "Strategic   planning   is   crucial   in   every   construction   project.   We   analyze   requirements,   assess   risks,   and   develop   structured   plans   to   ensure   smooth   execution.",
   },
   {
     icon: MdOutlineDesignServices,
     title: "DESIGN",
     about:
-      "Our design team focuses on innovation, sustainability, and practicality, creating visually appealing and structurally sound architectural solutions.",
+      "Our   design   team   focuses   on   innovation,   sustainability,   and   practicality,   creating   visually   appealing   and   structurally   sound   architectural   solutions.",
   },
   {
     icon: FaRegBuilding,
     title: "BUILDING",
     about:
-      "From groundbreaking to finishing touches, our building process ensures quality, safety, and adherence to construction standards for long-lasting structures.",
+      "From   groundbreaking   to   finishing   touches,   our   building   process   ensures   quality,   safety,   and   adherence   to   construction   standards   for   long-lasting   structures.",
   },
   {
     icon: FaSitemap,
     title: "FINISH",
     about:
-      "Finalizing construction involves meticulous attention to detail, ensuring that the completed project meets aesthetic, functional, and safety expectations.",
+      "Finalizing   construction   involves   meticulous   attention   to   detail,   ensuring   that   the   completed   project   meets   aesthetic,   functional,   and   safety   expectations.",
   },
 ];
 

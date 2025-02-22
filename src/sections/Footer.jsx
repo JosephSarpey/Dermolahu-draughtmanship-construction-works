@@ -54,7 +54,7 @@ const Footer = () => {
         <hr className='my-4 border-gray-600' />
 
         <div className='flex justify-center items-center gap-2 mt-10'>
-          <p className='text-lg text-center'>&copy; 2025, DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION WORKS, All Rights Reserved</p>
+          <p className='text-lg text-center'>&copy; 2025, DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD, All Rights Reserved.</p>
         </div>
         <div className='flex justify-center items-center gap-2 mt-10'>
         <p className='text-lg text-center'>Powered By J & K Technologies</p>

@@ -7,6 +7,7 @@ import Footer from './Footer'
 import { slideUpVariants, zoomInVariants } from './animation'
 import { planning } from '../export'
 
+
 const DetailedAbout = () => {
   return (
     <div className='w-full background-color: rgb(45, 42, 42)'>
@@ -110,23 +111,34 @@ const DetailedAbout = () => {
         <h2 className='text-white text-3xl font-bold mb-[40px]'>Meet Our Team</h2>
         <div className='flex flex-wrap justify-between items-start gap-[30px]'>
           <div className='w-[300px] flex flex-col items-center'>
-            <img src='/assets/ceo_profile.png' alt='Staff Member 1' className='w-[50%] h-auto rounded-full' />
+            <img src='/assets/ceo_profile.png' alt='Staff Member 1' className='team-image' />
             <h3 className='text-yellow-500 text-xl mt-[20px]'>Engr. Kenneth Cudjoe</h3>
             <p className='text-white text-lg text-center'>CEO/Managing Director</p>
           </div>
           <div className='w-[300px] flex flex-col items-center'>
-            <img src='/assets/mg_director.jpg' alt='Staff Member 2' className='w-[50%] h-auto rounded-full' />
+            <img src='/assets/mg_director.jpg' alt='Staff Member 2' className='team-image' />
             <h3 className='text-yellow-500 text-xl mt-[20px]'>Miss Elizabeth Obeng</h3>
             <p className='text-white text-lg text-center'>Assistant Managing Director</p>
           </div>
           <div className='w-[300px] flex flex-col items-center'>
-            <img src='/assets/image3.jpg' alt='Staff Member 3' className='w-[50%] h-auto rounded-full' />
-            <h3 className='text-yellow-500 text-xl mt-[20px]'>Michael Brown</h3>
-            <p className='text-white text-lg text-center'>Project Manager</p>
+            <img src='/assets/qty_surveyor.jpg' alt='Staff Member 3' className='team-image' />
+            <h3 className='text-yellow-500 text-xl mt-[20px]'>Sampson kofi Imbeah</h3>
+            <p className='text-white text-lg text-center'>Quantity Surveyor</p>
           </div>
         </div>
       </div>
       <Footer />
+
+      <style>
+        {`
+          .team-image {
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 50%; /* Make the image rounded */
+          }
+        `}
+      </style>
     </div>
   )
 }

@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaXmark, FaBars } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import logo from '/assets/logo.jpg' // Adjust the path to your logo image
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,6 +16,22 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   }
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY) {
+      setIsNavbarVisible(false);
+    } else {
+      setIsNavbarVisible(true);
+    }
+    setLastScrollY(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [lastScrollY]);
 
   const navItems = [
     { link: 'Home', path: '/' },
@@ -25,8 +43,8 @@ const Header = () => {
   ]
 
   return (
-    <header className='w-full flex flex-col items-center bg-white sticky top-0 z-50'>
-      <img src={logo} alt='Logo' className='h-30 w-24 mb-3' /> {/* Adjust the size as needed */}
+    <header className={`w-full flex flex-col items-center bg-white sticky top-0 z-50 text-sm transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <img src={logo} alt='Logo' className='h-12 w-12 mb-3' /> {/* Adjust the size as needed */}
       <nav className='w-full flex justify-between items-center gap-1 lg:px-16 px-6 py-4'>
         <div className='flex items-center'>
           <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu

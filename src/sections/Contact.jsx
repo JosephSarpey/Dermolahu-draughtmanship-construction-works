@@ -30,7 +30,7 @@ const Contact = () => {
             REACH US FOR ANY INQUIRY
           </motion.h1>
           <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-          <p className='text-3xl italic text-gray-600 mt-[60px]'>
+          <p className='text-sm italic text-gray-600 mt-[60px]'>
             Have questions or need assistance? Get in touch with us! Whether you're looking for expert consultation, project estimates, or general inquiries, our team is here to help. We strive to respond promptly and provide the best solutions tailored to your needs.
           </p>
         </motion.div>
