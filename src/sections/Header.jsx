@@ -34,14 +34,17 @@ const Header = () => {
     }
   }, [lastScrollY]);
 
-  const navItems = [
-    { link: 'Home', path: '/' },
-    { link: 'About', path: '/about' },
-    { link: 'Services', path: '/services' },
-    { link: 'Projects', path: '/projects' },
-    { link: 'Contact', path: '/contact' },
-    { link: 'Blog', path: '/blog' }, // Add Blog link
-  ]
+  // filepath: /c:/Users/HP/OneDrive/Desktop/demorlahu construction/vite-project/src/sections/Header.jsx
+
+const navItems = [
+  { link: 'Home', path: '/' },
+  { link: 'About', path: '/about' },
+  { link: 'Services', path: '/services' },
+  { link: 'Projects', path: '/projects' },
+  { link: 'Contact', path: '/contact' },
+  { link: 'Blog', path: '/blog' },
+  { link: 'Booking', path: '/booking' }, // Add Booking link
+];
 
   return (
     <header className={`w-full flex flex-col items-center bg-white sticky top-0 z-50 text-sm transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
@@ -59,8 +62,6 @@ const Header = () => {
             </li>
           ))}
         </ul>
-
-        <button className='bg-yellow-500 hover:bg-black hover:text-white text-black px-10 py-3 rounded-full font-semibold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden'>BOOK NOW</button>
 
         {/* mobile menu starts here */}
         <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>

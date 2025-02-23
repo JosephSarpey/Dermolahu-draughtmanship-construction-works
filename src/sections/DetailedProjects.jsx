@@ -35,7 +35,7 @@ const DetailedProjects = () => {
         className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
       >
         <motion.h1 variants={slideUpVariants} className='text-yellow-500 text-2xl'>OUR PROJECTS</motion.h1>
-        <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>DETAILED PROJECTS</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-white uppercase text-[40px] font-bold text-center'>SOME OF OUR PROJECTS</motion.h1>
         <motion.div
           variants={slideUpVariants}
           className='w-[120px] h-[6px] bg-yellow-500'

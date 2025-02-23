@@ -60,20 +60,20 @@ const DetailedContact = () => {
             REACH US FOR ANY INQUIRY
           </motion.h1>
           <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-          <p className='text-3xl italic text-gray-600 mt-[60px]'>
+          <p className='text-2xl italic text-gray-600 mt-[60px]'>
             Have questions or need assistance? Get in touch with us! Whether you're looking for expert consultation, project estimates, or general inquiries, our team is here to help. We strive to respond promptly and provide the best solutions tailored to your needs.
           </p>
           <div className='mt-[40px]'>
             <h2 className='text-2xl font-bold'>Contact Information</h2>
-            <p className='text-2xl mt-4 flex items-center'>
+            <p className='text-lg mt-4 flex items-center'>
               <FontAwesomeIcon icon={faMapMarkerAlt} className='mr-2 text-yellow-500' />
               Address: Agona nkwanta (damtse junction)
             </p>
-            <p className='text-2xl mt-4 flex items-center'>
+            <p className='text-lg mt-4 flex items-center'>
               <FontAwesomeIcon icon={faPhone} className='mr-2 text-yellow-500' />
               Phone: 0249308701/0508930080
             </p>
-            <p className='text-2xl mt-4 flex items-center'>
+            <p className='text-lg mt-4 flex items-center'>
               <FontAwesomeIcon icon={faEnvelope} className='mr-2 text-yellow-500' />
               Email: Demolahu.const@gmail.com
             </p>

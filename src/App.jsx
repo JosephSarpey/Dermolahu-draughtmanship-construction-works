@@ -9,7 +9,6 @@ import Working from './sections/Working'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
-import DetailedContact from './sections/DetailedContact';
 
 const App = () => {
   return (
@@ -23,6 +22,7 @@ const App = () => {
       <Testimonials />
       <Contact />
       <Footer />
+      
     </>
   )
 }
