@@ -50,7 +50,7 @@ const Booking = () => {
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
           setErrors({});
-          setSuccessMessage('Service booking sent successfully!');
+          setSuccessMessage('Service booked successfully!');
           setIsLoading(false);
           // Optionally, reset the form
           setFormData({
