@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-10 flex flex-col justify-between items-center bg-white transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-10 flex flex-col justify-between items-center bg-white transition-transform duration-300 ${
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
