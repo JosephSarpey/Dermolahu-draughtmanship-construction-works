@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import logo from "/assets/logo.jpg";
+import logo from "../assets/logo-cropped.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,26 +48,26 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed z-10 w-full flex flex-col justify-between items-center bg-white transition-transform duration-300 ${
+      className={`fixed w-full z-10 flex flex-col justify-between items-center bg-white transition-transform duration-300 ${
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="w-full flex justify-between items-center px-6 py-2 gap-1 lg:px-16">
-        <div className="flex flex-row space-x-3 items-center">
-          <img src={logo} alt="Logo" className="h-20 w-20 rounded-full" />{" "}
-          <div className="flex flex-col text-xl font-bold font-rubik md:text-2xl">
+      <nav className="w-full flex justify-between items-center px-6 py-2 gap-1 lg:px-6">
+        <div className="flex flex-row space-x-1 items-center">
+          <img src={logo} alt="Logo" className="h-13 w-13 rounded-full" />{" "}
+          <div className="flex flex-col text-base font-bold font-rubik md:text-xl">
             <h1 className="text-black">
-              Demolahu <span className="text-amber-500">Draughtsmanship</span>
+              Demolahu <span className="text-turquoise">Draughtsmanship</span>
             </h1>
-            <h1 className="text-amber-500 -mt-2">& Construction Ltd</h1>
+            <h1 className="text-turquoise -mt-2">& Construction Ltd</h1>
           </div>
         </div>
 
-        <ul className="hidden justify-center items-center font-semibold text-sm lg:flex ">
+        <ul className="hidden justify-center items-center text-sm lg:flex ">
           {navItems.map(({ link, path }) => (
             <li key={path}>
               <Link
-                className="text-black rounded-xl py-3 px-3 hover:text-amber-500"
+                className="text-black py-6 px-3 hover:text-turquoise hover:border-b-4 hover:border-b-turquoise"
                 to={path}
               >
                 {link}
