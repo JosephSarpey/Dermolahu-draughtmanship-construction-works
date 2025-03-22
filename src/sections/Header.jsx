@@ -78,14 +78,14 @@ const Header = () => {
 
         {/* mobile menu starts here */}
         <div
-          className="flex justify-between items-center lg:hidden mt-3"
+          className="flex justify-between items-center lg:hidden"
           onClick={toggleMenu}
         >
           <div>
             {isMenuOpen ? (
-              <FaXmark className="text-amber-500 text-3xl cursor-pointer" />
+              <FaXmark className="text-turquoise text-3xl cursor-pointer" />
             ) : (
-              <FaBars className="text-amber-500 text-3xl cursor-pointer" />
+              <FaBars className="text-turquoise text-3xl cursor-pointer" />
             )}
           </div>
         </div>
@@ -93,14 +93,14 @@ const Header = () => {
         <div
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } w-full h-fit bg-amber-500 p-4 absolute top-[72px] left-0`}
+          } w-full h-fit bg-white p-4 absolute top-17 left-0`}
           onClick={closeMenu}
         >
           <ul className="flex flex-col justify-center items-center gap-2 w-full">
             {navItems.map(({ link, path }) => (
               <li key={path}>
                 <Link
-                  className="text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center"
+                  className="text-black p-2 font-semibold rounded-lg hover:bg-turquoise hover:text-white w-full text-center"
                   to={path}
                 >
                   {link}
