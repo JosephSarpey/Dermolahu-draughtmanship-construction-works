@@ -67,7 +67,7 @@ const Header = () => {
           {navItems.map(({ link, path }) => (
             <li key={path}>
               <Link
-                className="text-black py-6 px-3 hover:text-turquoise hover:border-b-4 hover:border-b-turquoise"
+                className="text-black py-5.5 px-3 hover:text-turquoise hover:border-b-3 hover:border-b-turquoise"
                 to={path}
               >
                 {link}
