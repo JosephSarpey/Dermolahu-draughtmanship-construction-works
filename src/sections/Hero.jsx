@@ -30,6 +30,7 @@ const Hero = () => {
         >
           Quality of work is our priority
         </motion.h1>
+        <div className="w-[120px] h-1.5 bg-turquoise"></div>
         <div className="text-white text-base text-center md:text-left md:text-xl">
           <p>
             At Demorlahu Construction, we pride ourselves on delivering
@@ -53,7 +54,7 @@ const Hero = () => {
         >
           <motion.button
             variants={zoomInVariants}
-            className="bg-turquoise hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold"
+            className="bg-turquoise hover:bg-white hover:text-turquoise px-10 py-3 rounded-lg text-black font-bold"
           >
             READ MORE
           </motion.button>
@@ -65,6 +66,13 @@ const Hero = () => {
           </motion.button>
         </motion.div>
       </motion.div>
+      <div className="w-[40%] flex flex-col justify-end items-end">
+        <motion.img
+          initial="hidden"
+          whileInView="visible"
+          variants={zoomInVariants}
+        />
+      </div>
     </section>
   );
 };
