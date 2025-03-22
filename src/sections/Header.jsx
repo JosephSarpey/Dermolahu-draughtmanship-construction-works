@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react'
-import { FaXmark, FaBars } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
-import logo from '/assets/logo.jpg' // Adjust the path to your logo image
+import React, { useState, useEffect } from "react";
+import { FaXmark, FaBars } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import logo from "/assets/logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,11 +12,11 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-  }
+  };
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
@@ -25,63 +25,93 @@ const Header = () => {
       setIsNavbarVisible(true);
     }
     setLastScrollY(window.scrollY);
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [lastScrollY]);
 
   // filepath: /c:/Users/HP/OneDrive/Desktop/demorlahu construction/vite-project/src/sections/Header.jsx
 
-const navItems = [
-  { link: 'Home', path: '/' },
-  { link: 'About', path: '/about' },
-  { link: 'Services', path: '/services' },
-  { link: 'Projects', path: '/projects' },
-  { link: 'Contact', path: '/contact' },
-  { link: 'Blog', path: '/blog' },
-  { link: 'Booking', path: '/booking' }, // Add Booking link
-];
+  const navItems = [
+    { link: "Home", path: "/" },
+    { link: "About", path: "/about" },
+    { link: "Services", path: "/services" },
+    { link: "Projects", path: "/projects" },
+    { link: "Contact", path: "/contact" },
+    { link: "Blog", path: "/blog" },
+    { link: "Booking", path: "/booking" }, // Add Booking link
+  ];
 
   return (
-    <header className={`w-full flex flex-col items-center bg-white sticky top-0 z-50 text-sm transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <img src={logo} alt='Logo' className='h-12 w-12 mb-3' /> {/* Adjust the size as needed */}
-      <nav className='w-full flex justify-between items-center gap-1 lg:px-16 px-6 py-4'>
-        <div className='flex items-center'>
-          <h1 className='text-black md:text-4xl text-3xl font-bold font-rubik'>Demolahu
-          <span className='text-yellow-500 italic'> Draughtsmanship & Construction Ltd</span></h1>
+    <header
+      className={`fixed z-10 w-full flex flex-col justify-between items-center bg-white transition-transform duration-300 ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <nav className="w-full flex justify-between items-center px-6 py-2 gap-1 lg:px-16">
+        <div className="flex flex-row space-x-3 items-center">
+          <img src={logo} alt="Logo" className="h-20 w-20 rounded-full" />{" "}
+          <div className="flex flex-col text-xl font-bold font-rubik md:text-2xl">
+            <h1 className="text-black">
+              Demolahu <span className="text-amber-500">Draughtsmanship</span>
+            </h1>
+            <h1 className="text-amber-500 -mt-2">& Construction Ltd</h1>
+          </div>
         </div>
 
-        <ul className='lg:flex justify-center items-center gap-6 hidden'>
+        <ul className="hidden justify-center items-center font-semibold text-sm lg:flex ">
           {navItems.map(({ link, path }) => (
             <li key={path}>
-              <Link className='text-black uppercase font-bold cursor-pointer p-3 rounded-full hover:bg-yellow-500 hover:text-black text-[15px]' to={path}>{link}</Link>
+              <Link
+                className="text-black rounded-xl py-3 px-3 hover:text-amber-500"
+                to={path}
+              >
+                {link}
+              </Link>
             </li>
           ))}
         </ul>
 
         {/* mobile menu starts here */}
-        <div className='flex justify-between items-center lg:hidden mt-3' onClick={toggleMenu}>
+        <div
+          className="flex justify-between items-center lg:hidden mt-3"
+          onClick={toggleMenu}
+        >
           <div>
-            {isMenuOpen ? <FaXmark className='text-yellow-500 text-3xl cursor-pointer' /> : <FaBars className='text-yellow-500 text-3xl cursor-pointer' />}
+            {isMenuOpen ? (
+              <FaXmark className="text-amber-500 text-3xl cursor-pointer" />
+            ) : (
+              <FaBars className="text-amber-500 text-3xl cursor-pointer" />
+            )}
           </div>
         </div>
 
-        <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-yellow-500 p-4 absolute top-[72px] left-0`} onClick={closeMenu}>
-          <ul className='flex flex-col justify-center items-center gap-2 w-full'>
+        <div
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } w-full h-fit bg-amber-500 p-4 absolute top-[72px] left-0`}
+          onClick={closeMenu}
+        >
+          <ul className="flex flex-col justify-center items-center gap-2 w-full">
             {navItems.map(({ link, path }) => (
               <li key={path}>
-                <Link className='text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center' to={path}>{link}</Link>
+                <Link
+                  className="text-black uppercase font-semibold cursor-pointer p-2 rounded-lg hover:bg-black hover:text-white w-full text-center"
+                  to={path}
+                >
+                  {link}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
