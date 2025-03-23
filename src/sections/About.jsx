@@ -16,14 +16,14 @@ const About = () => {
         className='lg:w-[60%] w-full flex flex-col justify-center items-start lg:gap-6'
       >
         <motion.h1
-          variants={slideUpVariants} className='text-yellow-500 text-2xl'
+          variants={slideUpVariants} className='text-turquoise text-2xl'
         >WELCOME TO</motion.h1>
         <motion.h1
           variants={slideUpVariants}
           className='text-white uppercase text-[35px] font-bold'
         >DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD.
         </motion.h1>
-        <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+        <div className='w-[120px] h-[6px] bg-turquoise'></div>
         <p className='text-2xl italic text-gray-50 mt-[60px]'>Your trusted partner in architectural design, construction, and land development. We transform visions into reality with precision, innovation, and excellence.</p>
       </motion.div>
 
@@ -39,7 +39,7 @@ const About = () => {
         </p>
         <motion.button
           variants={zoomInVariants}
-          className='bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black'
+          className='bg-turquoise hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black'
           onClick={() => navigate('/about')}
         >
           READ MORE
