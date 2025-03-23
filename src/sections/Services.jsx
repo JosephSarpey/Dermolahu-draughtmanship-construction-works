@@ -11,7 +11,7 @@ const Services = () => {
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="w-full m-auto py-10 flex flex-col justify-between items-center gap-5"
+        className="w-full m-auto pb-10 pt-20 flex flex-col justify-between items-center gap-5"
       >
         <motion.h1
           variants={slideUpVariants}
