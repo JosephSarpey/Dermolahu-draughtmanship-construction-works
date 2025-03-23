@@ -21,7 +21,7 @@ const Services = () => {
         </motion.h1>
         <motion.h1
           variants={slideUpVariants}
-          className="text-black uppercase text-3xl font-semibold text-center md:text-4xl lg:text-5xl"
+          className="text-black uppercase text-2xl font-semibold text-center md:text-3xl lg:text-4xl"
         >
           OUR BEST SERVICES
         </motion.h1>
