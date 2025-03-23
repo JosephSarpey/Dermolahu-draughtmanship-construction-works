@@ -14,12 +14,12 @@ import { slideUpVariants, zoomInVariants } from "./animation";
 
 const Portfolio = () => {
   return (
-    <div id="projects" className="w-full">
+    <section id="projects" className="w-full m-auto py-14 pt-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="w-[90%] m-auto py-14 flex flex-col justify-between items-center gap-5 lg:w-[80%] "
+        className="flex flex-col justify-between items-center gap-5"
       >
         <motion.h1
           variants={slideUpVariants}
@@ -43,18 +43,18 @@ const Portfolio = () => {
         initial="hidden"
         whileInView="visible"
         variants={zoomInVariants}
-        className="w-full m-auto grid lg:grid-cols-4 grid-cols-1"
+        className="w-full m-auto grid grid-cols-1 gap-5 pt-15 px-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        <img src={project1} alt="project image" className="h-[250px] w-full" />
-        <img src={project2} alt="project image" className="h-[250px] w-full" />
-        <img src={project3} alt="project image" className="h-[250px] w-full" />
-        <img src={project4} alt="project image" className="h-[250px] w-full" />
-        <img src={project5} alt="project image" className="h-[250px] w-full" />
-        <img src={project6} alt="project image" className="h-[250px] w-full" />
-        <img src={project7} alt="project image" className="h-[250px] w-full" />
-        <img src={project8} alt="project image" className="h-[250px] w-full" />
+        <img src={project1} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project2} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project3} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project4} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project5} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project6} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project7} alt="project image" className="h-64 w-full rounded-2xl" />
+        <img src={project8} alt="project image" className="h-64 w-full rounded-2xl" />
       </motion.div>
-    </div>
+    </section>
   );
 };
 
