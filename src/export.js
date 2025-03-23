@@ -14,7 +14,7 @@ import client1 from "../src/assets/client1.png";
 import client2 from "../src/assets/client2.png";
 import client3 from "../src/assets/client3.png";
 
-export const allservices = [
+export const allServices = [
   {
     icon: building,
     title: "BUILDING MATERIALS",
@@ -29,7 +29,7 @@ export const allservices = [
   },
   {
     icon: design,
-    title: "BUILDING/ARCHITECTURAL DRAWINGS",
+    title: "BUILDING/ ARCHITECTURAL DRAWINGS",
     about:
       "We create precise architectural and structural designs that bring your vision to life, ensuring aesthetics, functionality, and compliance with building regulations.",
   },
