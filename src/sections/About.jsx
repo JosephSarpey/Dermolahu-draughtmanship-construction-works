@@ -16,7 +16,7 @@ const About = () => {
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="w-full flex flex-col  justify-center items-center gap-3 md:items-start lg:w-[60%] lg:gap-6"
+        className="w-full flex flex-col justify-center items-center gap-3 md:items-start lg:w-[60%] lg:gap-6"
       >
         <motion.h1
           variants={slideUpVariants}
