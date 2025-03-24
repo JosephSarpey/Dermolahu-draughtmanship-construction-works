@@ -40,7 +40,7 @@ const Working = () => {
           {planning.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center gap-5 border-2 border-turquoise rounded-md p-6 lg:min-h-110 xl:min-h-100"
+              className="flex flex-col justify-center items-center gap-5 border-2 border-turquoise rounded-md p-6 lg:min-h-110 xl:min-h-110"
             >
               <div>
                 <item.icon className="size-20 bg-turquoise hover:bg-black hover:fill-white p-4 rounded-full cursor-pointer" />
