@@ -13,11 +13,11 @@ const Working = () => {
         variants={slideUpVariants}
         className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
       >
-        <motion.h1 variants={slideUpVariants} className='text-yellow-500 text-2xl'>A SYSTEMATIC APPROACH</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-turquoise text-2xl'>A SYSTEMATIC APPROACH</motion.h1>
         <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>HOW OUR EXPERT ENGINEERS WORK</motion.h1>
         <motion.div
           variants={slideUpVariants}
-          className='w-[120px] h-[6px] bg-yellow-500'
+          className='w-[120px] h-[6px] bg-turquoise'
         ></motion.div>
 
         {/* make div for services mapping from export js file */}
@@ -29,9 +29,9 @@ const Working = () => {
         >
           {
             planning.map((item, index) => (
-              <div key={index} className='flex flex-col justify-center items-center gap-5 border-2 border-yellow-500 rounded-mg p-6'>
+              <div key={index} className='flex flex-col justify-center items-center gap-5 border-2 border-turquoise rounded-mg p-6'>
                 <div>
-                  <item.icon className='size-[80px] bg-yellow-500 hover:bg-black hover:fill-white p-4 rounded-full cursor-pointer' />
+                  <item.icon className='size-[80px] bg-turquoise hover:bg-black hover:fill-white p-4 rounded-full cursor-pointer' />
                 </div>
                 <h1 className='text-2xl font-bold uppercase'>{item.title}</h1>
                 <p className='text-[20px] text-center text-gray-600'>{item.about}</p>
