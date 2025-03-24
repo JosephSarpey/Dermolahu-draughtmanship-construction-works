@@ -19,7 +19,7 @@ const Contact = () => {
         >
           <motion.h1
             variants={slideUpVariants} 
-            className='text-yellow-500 text-2xl'
+            className='text-turquoise text-2xl'
           >
             CONTACT US
           </motion.h1>
@@ -29,7 +29,7 @@ const Contact = () => {
           >
             REACH US FOR ANY INQUIRY
           </motion.h1>
-          <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+          <div className='w-[120px] h-[6px] bg-turquoise'></div>
           <p className='text-2xl italic text-gray-600 mt-[60px]'>
             Have questions or need assistance? Get in touch with us! Whether you're looking for expert consultation, project estimates, or general inquiries, our team is here to help. We strive to respond promptly and provide the best solutions tailored to your needs.
           </p>
@@ -43,7 +43,7 @@ const Contact = () => {
         >
           <motion.button
             variants={zoomInVariants}
-            className='bg-yellow-500 hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full flex items-center justify-center'
+            className='bg-turquoise hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full flex items-center justify-center'
           >
             <Link to="/contact" className='flex items-center'>
               <FontAwesomeIcon icon={faEnvelope} className='mr-2' />
