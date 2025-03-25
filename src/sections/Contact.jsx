@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div id="contact" className="bg-white w-full">
+    <section id="contact" className="bg-white w-full">
       <div className="w-[90%] m-auto py-14 flex lg:flex-row flex-col justify-between items-start gap-12 lg:w-[80%] ">
         <motion.div
           initial="hidden"
@@ -56,7 +56,7 @@ const Contact = () => {
           </motion.button>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
