@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-black text-white p-10">
+      <div className="bg-black text-white px-10 pt-10 pb-5">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Company Info */}
           <div>
@@ -98,16 +98,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="my-4 border-gray-600" />
+        <hr className="my-5 border-gray-600" />
 
-        <div className="flex justify-center items-center gap-2 mt-10">
-          <p className="text-lg text-center">
+        <div className="flex justify-center items-center gap-2 mt-5">
+          <p className="text-sm text-center">
             &copy; 2025, DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD, All
             Rights Reserved.
           </p>
         </div>
-        <div className="flex justify-center items-center gap-2 mt-10">
-          <p className="text-lg text-center">Powered By J & K Technologies</p>
+        <div className="flex justify-center items-center gap-2">
+          <p className="text-xs text-center italic mt-3">
+            Powered By <b>J&K </b>
+            Technologies
+          </p>
         </div>
       </div>
 
