@@ -15,13 +15,13 @@ const Working = () => {
       >
         <motion.h1
           variants={slideUpVariants}
-          className="text-turquoise text-2xl md:text-3xl"
+          className="text-turquoise text-2xl"
         >
           A SYSTEMATIC APPROACH
         </motion.h1>
         <motion.h1
           variants={slideUpVariants}
-          className="text-black uppercase text-2xl font-semibold text-center md:text-3xl lg:text-4xl"
+          className="text-black uppercase text-2xl font-semibold text-center lg:text-4xl"
         >
           HOW OUR EXPERT ENGINEERS WORK
         </motion.h1>

@@ -20,6 +20,7 @@
 
 @theme {
   --color-turquoise: hsl(181, 71%, 41%);
+  --color-about-bg: rgb(45, 42, 42)
 }
 
 * {
