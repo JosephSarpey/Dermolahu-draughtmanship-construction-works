@@ -124,7 +124,7 @@ const DetailedServices = () => {
             {services.map((item, index) => (
               <motion.div
                 variants={zoomInVariants}
-                className="flex flex-col justify-center items-center gap-5 p-8 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:min-h-160 lg:min-h-170"
+                className="flex flex-col justify-center items-center overflow-hidden gap-5 p-8 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:min-h-160 lg:min-h-170"
                 key={index}
               >
                 <img

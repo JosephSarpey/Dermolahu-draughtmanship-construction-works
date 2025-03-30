@@ -40,7 +40,7 @@ const Services = () => {
           {allServices.map((item, index) => (
             <motion.div
               variants={zoomInVariants}
-              className="flex justify-center items-start gap-5 p-7 md:p-8 max-h-70 lg:min-h-120 xl:min-h-110"
+              className="flex justify-center items-start overflow-hidden gap-5 p-7 md:p-8 max-h-70 lg:min-h-120 xl:min-h-110"
               key={index}
             >
               <img

@@ -76,12 +76,12 @@ const DetailedProjects = () => {
   return (
     <div className="w-full">
       <Header />
-      <section>
+      <section className="w-[90%] m-auto py-10 mt-17 lg:w-full">
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={slideUpVariants}
-          className="lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]"
+          className="m-auto flex flex-col justify-between items-center gap-5 md:px-10"
         >
           <motion.h1
             variants={slideUpVariants}
@@ -91,20 +91,20 @@ const DetailedProjects = () => {
           </motion.h1>
           <motion.h1
             variants={slideUpVariants}
-            className="text-white uppercase text-[40px] font-bold text-center"
+            className="text-white uppercase text-2xl font-semibold text-center md:text-3xl"
           >
             SOME OF OUR PROJECTS
           </motion.h1>
           <motion.div
             variants={slideUpVariants}
-            className="w-[120px] h-[6px] bg-turquoise"
+            className="w-[120px] h-1.5 bg-turquoise"
           ></motion.div>
 
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={zoomInVariants}
-            className="w-full m-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8"
+            className="w-full m-auto mt-7 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8"
           >
             {projects.map((project) => (
               <motion.div
@@ -115,10 +115,10 @@ const DetailedProjects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-[250px] w-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="h-60 w-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="p-4 transition-transform duration-300 hover:scale-110">
-                  <h2 className="text-lg font-bold">{project.title}</h2>
+                  <h2 className="text-lg font-semibold">{project.title}</h2>
                   <p className="text-sm text-gray-600">{project.description}</p>
                 </div>
               </motion.div>
