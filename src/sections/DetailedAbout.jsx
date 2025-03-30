@@ -21,7 +21,7 @@ const DetailedAbout = () => {
           >
             <motion.h1
               variants={slideUpVariants}
-              className="text-2xl text-turquoise md:text-left md:text-3xl"
+              className="text-2xl text-turquoise md:text-left"
             >
               WELCOME TO
             </motion.h1>

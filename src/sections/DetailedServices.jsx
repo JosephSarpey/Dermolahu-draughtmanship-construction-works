@@ -91,73 +91,78 @@ const DetailedServices = () => {
   return (
     <div className="w-full bg-white">
       <Header />
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={slideUpVariants}
-        className="lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]"
-      >
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-turquoise text-2xl"
-        >
-          OUR SERVICES
-        </motion.h1>
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-black uppercase text-[40px] font-bold text-center"
-        >
-          DETAILED SERVICES
-        </motion.h1>
-        <motion.div
-          variants={slideUpVariants}
-          className="w-[120px] h-[6px] bg-turquoise"
-        ></motion.div>
-
+      <section className=" w-[90%] m-auto py-10 lg:w-full mt-17">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={zoomInVariants}
-          className="w-full grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-[20px] mt-[30px]"
+          variants={slideUpVariants}
+          className="flex flex-col justify-between items-center gap-3"
         >
-          {services.map((item, index) => (
-            <motion.div
-              variants={zoomInVariants}
-              className="flex flex-col justify-center items-center gap-5 p-8 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              key={index}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-40 object-cover rounded-lg"
-              />
-              <div className="flex flex-col justify-center items-center gap-3 text-center">
-                <h1 className="text-xl font-bold text-black">{item.title}</h1>
-                <p className="text-[18px] text-gray-700">{item.about}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.h1
+            variants={slideUpVariants}
+            className="text-turquoise text-2xl"
+          >
+            OUR SERVICES
+          </motion.h1>
+          <motion.h1
+            variants={slideUpVariants}
+            className="text-black uppercase text-2xl font-semibold text-center md:text-3xl"
+          >
+            DETAILED SERVICES
+          </motion.h1>
+          <motion.div
+            variants={slideUpVariants}
+            className="w-[120px] h-1.5 bg-turquoise"
+          ></motion.div>
 
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={zoomInVariants}
+            className=" py-10 w-full grid grid-cols-1 justify-center items-center gap-5 mt-7 md:grid-cols-2 md:px-10 lg:grid-cols-3 "
+          >
+            {services.map((item, index) => (
+              <motion.div
+                variants={zoomInVariants}
+                className="flex flex-col justify-center items-center gap-5 p-8 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:min-h-160 lg:min-h-170"
+                key={index}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-40 object-cover rounded-lg lg:h-50"
+                />
+                <div className="flex flex-col justify-center items-center gap-3 text-center">
+                  <h1 className="text-xl font-semibold text-black">
+                    {item.title}
+                  </h1>
+                  <p className="text-lg text-gray-700">{item.about}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
         <motion.div
           variants={slideUpVariants}
-          className="w-full mt-[60px] text-center"
+          className="w-full text-center pt-10 "
         >
-          <h2 className="text-2xl font-bold text-black">Book A Service Now</h2>
-          <p className="text-[18px] text-gray-700 mt-2">
+          <h2 className="text-2xl font-semibold text-black">
+            Book A Service Now
+          </h2>
+          <p className="text-base text-gray-700 mt-2">
             DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD
           </p>
-          <p className="text-[18px] text-gray-700">
+          <p className="text-base text-gray-700">
             Contact: 0249308701 / 0508930080
           </p>
-          <p className="text-[18px] text-gray-700">
+          <p className="text-base text-gray-700">
             Email: Demolahu.const@gmail.com
           </p>
-          <p className="text-[18px] text-gray-700">
+          <p className="text-base text-gray-700">
             Location: Agona Nkwanta (Damtse Junction)
           </p>
         </motion.div>
-      </motion.div>
+      </section>
       <Footer />
     </div>
   );
