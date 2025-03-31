@@ -8,9 +8,9 @@ const About = () => {
   const navigate = useNavigate();
 
   return (
-    <div
-    id="about"
-    className="flex flex-col justify-between w-[90%] m-auto py-10 gap-10 items-start lg:w-[80%] lg:flex-row"
+    <section
+      id="about"
+      className="flex flex-col justify-between w-[90%] m-auto py-10 gap-10 items-start lg:w-[80%] lg:flex-row"
     >
       <motion.div
         initial="hidden"
@@ -63,7 +63,7 @@ const About = () => {
           READ MORE
         </motion.button>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

@@ -15,13 +15,13 @@ const Services = () => {
       >
         <motion.h1
           variants={slideUpVariants}
-          className="text-turquoise text-2xl md:text-3xl"
+          className="text-turquoise text-2xl"
         >
           SPECIAL OFFER
         </motion.h1>
         <motion.h1
           variants={slideUpVariants}
-          className="text-black uppercase text-2xl font-semibold text-center md:text-3xl lg:text-4xl"
+          className="text-black uppercase text-2xl font-semibold text-center md:text-3xl"
         >
           OUR BEST SERVICES
         </motion.h1>
@@ -40,7 +40,7 @@ const Services = () => {
           {allServices.map((item, index) => (
             <motion.div
               variants={zoomInVariants}
-              className="flex justify-center items-start gap-5 p-7 md:p-8 max-h-70 lg:min-h-120 xl:min-h-110"
+              className="flex justify-center items-start overflow-hidden gap-5 p-7 md:p-8 max-h-70 lg:min-h-120 xl:min-h-110"
               key={index}
             >
               <img
