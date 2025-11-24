@@ -16,9 +16,9 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import Header from "./Header";
-import Footer from "./Footer";
-import { slideUpVariants, zoomInVariants } from "./animation";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
+import { slideUpVariants, zoomInVariants } from "../sections/animation";
 
 const DetailedContact = () => {
   const [formData, setFormData] = useState({

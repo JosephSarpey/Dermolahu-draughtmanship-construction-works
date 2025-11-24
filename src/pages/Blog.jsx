@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "./Header";
-import Footer from "./Footer";
-import { slideUpVariants, zoomInVariants } from "./animation";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
+import { slideUpVariants, zoomInVariants } from "../sections/animation";
 
 const Blog = () => {
   const blogPosts = [

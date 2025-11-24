@@ -13,6 +13,51 @@ import { FaSitemap } from "react-icons/fa";
 import client1 from "../src/assets/client1.png";
 import client2 from "../src/assets/client2.png";
 import client3 from "../src/assets/client3.png";
+import project1 from "../src/assets/project1.jpg";
+import project2 from "../src/assets/project2.jpg";
+import project3 from "../src/assets/project3.jpg";
+import project4 from "../src/assets/project4.jpg";
+
+export const projects = [
+  {
+    img: project3,
+    title: "Luxury Villa Project",
+    category: "High-End Residential"
+  },
+  {
+    img: project2,
+    title: "Commercial Office Building",
+    category: "Commercial Construction"
+  },
+  {
+    img: project1,
+    title: "Modern Residential Complex",
+    category: "Residential Construction"
+  },
+  {
+    img: project4,
+    title: "Shopping Mall Renovation",
+    category: "Commercial Renovation"
+  }
+];
+
+export const team = [
+  {
+    name: "Eng. Kenneth Cudjoe",
+    role: "CEO / Managing Director",
+    img: "/assets/ceo_profile.png",
+  },
+  {
+    name: "Miss Elizabeth Obeng",
+    role: "Assistant Managing Director",
+    img: "/assets/mg_director.jpg",
+  },
+  {
+    name: "Sampson Kofi Imbeah",
+    role: "Quantity Surveyor",
+    img: "/assets/qty_surveyor.jpg",
+  },
+];
 
 export const allServices = [
   {
@@ -134,5 +179,12 @@ export const clients = [
     about:
       "“Quality building materials and expert construction services made our project a success. I highly recommend their services for any construction needs.”",
     post: "Builder",
+  },
+  {
+    image: client3,
+    name: "John Doe",
+    about:
+      "“The team was professional, punctual, and delivered the project on time. Their expertise in construction was invaluable.”",
+    post: "Contractor",
   },
 ];

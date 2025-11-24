@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
 import { useNavigate } from "react-router-dom";
+import aboutImage from "../assets/about.jpg";
+import { FaInfoCircle } from "react-icons/fa";
 
 const About = () => {
   const navigate = useNavigate();
@@ -10,57 +12,54 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col justify-between w-[90%] m-auto py-10 gap-10 items-start lg:w-[80%] lg:flex-row"
+      className="w-[90%] lg:w-[80%] m-auto py-16 flex flex-col lg:flex-row-reverse items-center gap-14"
     >
+      {/* Image */}
       <motion.div
         initial="hidden"
         whileInView="visible"
-        variants={slideUpVariants}
-        className="w-full flex flex-col justify-center items-center gap-3 md:items-start lg:w-[60%] lg:gap-6"
+        variants={zoomInVariants}
+        className="flex-[0.45] w-full"
       >
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-2xl text-turquoise md:text-left md:text-3xl"
-        >
-          WELCOME TO
-        </motion.h1>
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-white uppercase text-2xl text-center font-semibold md:text-left md:text-3xl lg:text-4xl"
-        >
-          DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD.
-        </motion.h1>
-        <div className="w-[120px] h-1.5 bg-turquoise"></div>
-        <p className="text-xl italic text-center text-gray-50 md:text-2xl md:text-left">
-          Your trusted partner in architectural design, construction, and land
-          development. We transform visions into reality with precision,
-          innovation, and excellence.
-        </p>
+        <img
+          src={aboutImage}
+          alt="Architectural construction project by Demolahu Draughtsmanship"
+          className="rounded-xl shadow-xl object-cover w-full h-[350px] md:h-[420px]"
+        />
       </motion.div>
 
+      {/* Text */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="w-full  flex flex-col justify-center items-start gap-6 lg:w-[40%]"
+        className="flex-[0.55] flex flex-col gap-6 text-center md:text-left"
       >
-        <p className="text-white text-lg text-justify">
-          At Demolahu Draughtsmanship & Construction Ltd, we bring expertise and
-          innovation to the construction industry. Our company specializes in
-          architectural and building drawings, construction works, land
-          surveying, and cost estimation to help bring your projects to life
-          with precision and efficiency. Beyond construction, we provide
-          comprehensive consultancy services for building permits, soil testing,
-          environmental and fire safety certifications, planning schemes, land
-          acquisition, and registration—ensuring your projects meet all
-          regulatory standards.
+        <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug uppercase">
+          Building Excellence from Blueprint to Completion
+        </h2>
+
+        <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+          Demolahu Draughtsmanship & Construction Ltd. is a trusted construction and
+          architectural design company delivering high-precision building plans, land development,
+          surveying, and full project consultancy across residential, commercial, and industrial projects.
         </p>
+
+        <ul className="text-gray-200 text-lg leading-relaxed space-y-2">
+          <li>• Architectural & structural drawings</li>
+          <li>• Land surveying and cost estimation</li>
+          <li>• Construction and project supervision</li>
+          <li>• Consultancy for permits, soil testing, safety & land registration</li>
+        </ul>
+
         <motion.button
           variants={zoomInVariants}
-          className="bg-turquoise hover:bg-white hover:text-black px-10 py-3 rounded-lg font-bold text-black"
           onClick={() => navigate("/about")}
+          className="bg-turquoise text-black cursor-pointer px-10 py-3 font-semibold rounded-lg hover:brightness-110 transition-all w-fit mx-auto md:mx-0"
         >
-          READ MORE
+
+          Learn More About Us
+
         </motion.button>
       </motion.div>
     </section>

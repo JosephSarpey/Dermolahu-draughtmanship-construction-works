@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
 /*
@@ -20,6 +21,27 @@
 
 @theme {
   --color-turquoise: hsl(181, 71%, 41%);
+}
+
+/* Brand color and utility classes */
+:root {
+  --color-turquoise: hsl(181, 71%, 41%);
+}
+
+/* Utilities to ensure consistent brand usage across the app */
+.text-turquoise { color: var(--color-turquoise) !important; }
+.bg-turquoise { background-color: var(--color-turquoise) !important; }
+.border-turquoise { border-color: var(--color-turquoise) !important; }
+
+/* Button helpers for non-Tailwind contexts */
+.btn-turquoise {
+  background-color: var(--color-turquoise);
+  color: #000;
+}
+.btn-outline-turquoise {
+  background: transparent;
+  border: 1px solid var(--color-turquoise);
+  color: var(--color-turquoise);
 }
 
 * {

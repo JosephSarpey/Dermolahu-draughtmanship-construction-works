@@ -1,59 +1,86 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import project1 from "../assets/project1.jpg";
-import project2 from "../assets/project2.jpg";
-import project3 from "../assets/project3.jpg";
-import project4 from "../assets/project4.jpg";
-import project5 from "../assets/project5.jpg";
-import project6 from "../assets/project6.jpg";
-import project7 from "../assets/project7.jpg";
-import project8 from "../assets/project8.jpg";
-
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
+import { projects } from "../export";
 
 const Portfolio = () => {
   return (
-    <section id="projects" className="w-full m-auto py-14 pt-20">
+    <section id="projects" className="w-full py-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="flex flex-col justify-between items-center gap-5"
+        className="flex flex-col justify-between items-center gap-3 mb-10"
       >
-        <motion.h1
+        <motion.p
           variants={slideUpVariants}
-          className="text-turquoise text-2xl md:text-3xl"
+          className="text-turquoise text-lg md:text-xl tracking-wider"
         >
           PORTFOLIO
-        </motion.h1>
-        <motion.h1
+        </motion.p>
+
+        <motion.h2
           variants={slideUpVariants}
-          className="text-white uppercase text-2xl font-semibold text-center md:text-3xl lg:text-4xl"
+          className="text-white uppercase text-3xl font-bold text-center md:text-4xl lg:text-5xl"
         >
           SOME OF OUR PROJECTS
-        </motion.h1>
+        </motion.h2>
+
         <motion.div
           variants={slideUpVariants}
-          className="w-[120px] h-1.5 bg-turquoise"
+          className="w-[120px] h-[6px] bg-turquoise rounded-full"
         ></motion.div>
+
+        {/* NEW – credibility sentence */}
+        <motion.p
+          variants={slideUpVariants}
+          className="text-gray-300 text-center text-base md:text-lg max-w-2xl mt-4"
+        >
+          We specialize in delivering both residential and commercial projects with modern architectural standards, precision execution, and long-lasting structural integrity.
+        </motion.p>
       </motion.div>
 
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={zoomInVariants}
-        className="w-full m-auto grid grid-cols-1 gap-5 pt-15 px-10 md:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto"
       >
-        <img src={project1} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project2} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project3} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project4} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project5} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project6} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project7} alt="project image" className="h-64 w-full rounded-2xl" />
-        <img src={project8} alt="project image" className="h-64 w-full rounded-2xl" />
+        {projects.map((p, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="relative group overflow-hidden rounded-2xl cursor-pointer"
+          >
+            <img
+              src={p.img}
+              alt={p.title}
+              className="h-56 w-full object-cover rounded-2xl group-hover:brightness-50 transition-all duration-300"
+            />
+
+            {/* Project Info - Always visible on mobile, hover on desktop */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 bg-gradient-to-t from-black/80 to-transparent rounded-2xl">
+              <div className="mt-auto mb-3">
+                <h3 className="text-white text-lg md:text-xl font-semibold">{p.title}</h3>
+                <p className="text-turquoise text-sm md:text-base mt-1">{p.category}</p>
+                <button className="mt-2 md:mt-3 px-3 py-1 md:px-4 md:py-1.5 bg-turquoise text-black text-xs md:text-sm font-medium rounded-full hover:bg-white transition-all">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
+
+      <div className="flex justify-center mt-12">
+        <Link 
+          to="/projects" 
+          className="px-8 py-3 border border-turquoise text-turquoise rounded-full hover:bg-turquoise hover:text-white transition-all font-medium"
+        >
+          View More Projects
+        </Link>
+      </div>
     </section>
   );
 };

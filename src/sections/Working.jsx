@@ -6,54 +6,73 @@ import { planning } from "../export";
 
 const Working = () => {
   return (
-    <div id="working" className="w-full bg-white">
+    <section
+      id="working"
+      className="w-full bg-cover bg-center bg-fixed relative"
+      style={{
+        backgroundImage: "url('/assets/footer-bg.jpg')", 
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className="w-[90%] m-auto py-10 pt-20 flex flex-col justify-between items-center gap-5 lg:w-[80%] "
+        className="relative w-[90%] lg:w-[80%] mx-auto py-24 flex flex-col items-center gap-6"
       >
-        <motion.h1
+        {/* Gradient for title area */}
+        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/60 to-transparent -z-10"></div>
+
+        <motion.h2
           variants={slideUpVariants}
-          className="text-turquoise text-2xl"
+          className="text-turquoise text-xl tracking-wide"
         >
           A SYSTEMATIC APPROACH
-        </motion.h1>
+        </motion.h2>
+
         <motion.h1
           variants={slideUpVariants}
-          className="text-black uppercase text-2xl font-semibold text-center lg:text-4xl"
+          className="text-white uppercase text-3xl lg:text-5xl font-bold text-center"
         >
-          HOW OUR EXPERT ENGINEERS WORK
+          How Our Expert Engineers Work
         </motion.h1>
+
         <motion.div
           variants={slideUpVariants}
-          className="w-[120px] h-1.5 bg-turquoise"
+          className="w-[140px] h-1.5 bg-turquoise"
         ></motion.div>
 
-        {/* make div for services mapping from export js file */}
+        {/* Cards */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
           variants={zoomInVariants}
-          className="w-full gap-5 pt-10 grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-4 "
+          className="w-full pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {planning.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex flex-col justify-center items-center gap-5 border-2 border-turquoise rounded-md p-6 lg:min-h-110 xl:min-h-110"
+              className="flex flex-col items-center text-center gap-4
+              bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-8
+              transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
-              <div>
-                <item.icon className="size-20 bg-turquoise hover:bg-black hover:fill-white p-4 rounded-full cursor-pointer" />
-              </div>
-              <h1 className="text-xl font-semibold uppercase">{item.title}</h1>
-              <p className="text-lg text-center text-gray-600">
+              <item.icon
+                className="w-20 h-20 p-4 rounded-full bg-turquoise text-white 
+                transition-all duration-300 hover:bg-black"
+              />
+
+              <h3 className="text-xl font-semibold uppercase tracking-wide text-white">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-200 leading-relaxed text-base">
                 {item.about}
               </p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

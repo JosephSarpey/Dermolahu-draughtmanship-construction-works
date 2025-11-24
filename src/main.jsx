@@ -3,12 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import DetailedServices from './sections/DetailedServices'
-import DetailedProjects from './sections/DetailedProjects'
-import DetailedContact from './sections/DetailedContact'
-import Blog from './sections/Blog'
-import DetailedAbout from './sections/DetailedAbout'
-import Booking from './sections/Booking' // Import Booking component
+import DetailedServices from './pages/DetailedServices'
+import DetailedProjects from './pages/DetailedProjects'
+import DetailedContact from './pages/DetailedContact'
+import Blog from './pages/Blog'
+import DetailedAbout from './pages/DetailedAbout'
+import Booking from './pages/Booking' 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/projects" element={<DetailedProjects />} />
         <Route path="/contact" element={<DetailedContact />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/booking" element={<Booking />} /> {/* Add Booking route */}
+        <Route path="/booking" element={<Booking />} /> 
       </Routes>
     </Router>
   </StrictMode>,

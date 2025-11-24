@@ -1,78 +1,88 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import React from "react";
 import backgroundImage from "../assets/homeimg3.jpg";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
+import { FaHardHat, FaClipboardCheck, FaAward, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelopeCircleCheck, FaHelmetUn } from "react-icons/fa6";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="mt-17 w-full bg-cover bg-center"
+      className="relative w-full min-h-[88vh] bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+
       <motion.div
         initial="hidden"
-        whileInView={"visible"}
+        whileInView="visible"
         variants={slideUpVariants}
-        className="h-full py-10 px-7 gap-5 w-full flex flex-col justify-between items-center md:justify-normal md:gap-5 md:w-[60%] md:items-start lg:w-1/2"
+        className="relative z-10 w-[90%] lg:w-[60%] px-6 py-20 flex flex-col gap-6 text-center md:text-left"
       >
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-white text-2xl text-center md:text-left md:text-3xl"
-        >
-          WE ARE HERE TO HELP YOU
-        </motion.h1>
-        <motion.h1
-          variants={slideUpVariants}
-          className="text-white text-3xl font-semibold text-center md:text-left md:text-4xl"
-        >
-          Quality of work is our priority
-        </motion.h1>
-        <div className="w-[120px] h-1.5 bg-turquoise"></div>
-        <div className="text-white text-base text-center md:text-left md:text-xl">
-          <p>
-            At Demorlahu Construction, we pride ourselves on delivering
-            top-notch construction services with a focus on quality and customer
-            satisfaction. Our team of experienced professionals is dedicated to
-            bringing your vision to life, whether it's a residential project or
-            a commercial development.
-          </p>
-          <p>
-            We use the latest technology and sustainable practices to ensure
-            every project is completed on time and within budget. Trust us to
-            handle your construction needs with precision and care. Your dream
-            project is our priority.
-          </p>
+        {/* Headline */}
+        <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight">
+          Precision-Driven Construction & Architectural Design
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-gray-200 text-lg md:text-xl max-w-2xl">
+          Delivering trusted architectural drawings, land development services, and full project execution across Ghana — on time, on budget, with excellence.
+        </p>
+
+        {/* KPI Badges */}
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-1">
+          {[
+            { text: "10+ Years Industry Experience", icon: <FaHardHat className="mr-2" /> },
+            { text: "500+ Completed Projects", icon: <FaClipboardCheck className="mr-2" /> },
+            { text: "ISO-Certified Work Standards", icon: <FaAward className="mr-2" /> },
+            { text: "Serving Ghana Nationwide", icon: <FaMapMarkerAlt className="mr-2" /> },
+          ].map((item, index) => (
+            <motion.span
+              key={index}
+              variants={zoomInVariants}
+              className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm md:text-base font-medium px-4 py-2 rounded-full flex items-center"
+            >
+              {item.icon}
+              {item.text}
+            </motion.span>
+          ))}
         </div>
+
+        {/* CTA Buttons */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={zoomInVariants}
-          className="flex justify-center items-center gap-5"
+          className="flex flex-col sm:flex-row gap-5 mt-6 justify-center md:justify-start"
         >
-          <motion.button
-            variants={zoomInVariants}
-            className="bg-turquoise hover:bg-white hover:text-turquoise px-10 py-3 rounded-lg text-black font-bold"
+          <a
+            href="/contact"
+            className="bg-turquoise hover:brightness-110 text-black px-6 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 group"
           >
-            READ MORE
-          </motion.button>
-          <motion.button
-            variants={zoomInVariants}
-            className="border-white hover:border-turquoise hover:text-turquoise border-2 px-10 py-3 rounded-lg text-white font-bold"
+            Request A Quote
+            <FaEnvelopeCircleCheck className="group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          <a
+            href="/projects" 
+            className="border-2 border-white hover:border-turquoise hover:text-turquoise px-6 py-3 rounded-lg text-white font-semibold transition-all flex items-center gap-2 group"
           >
-            REACH US
-          </motion.button>
+            <FaHelmetUn className="group-hover:animate-pulse" />
+            Visit Our Portfolio
+          </a>
         </motion.div>
+
+        {/* Optional — TRUST LOGOS (COMMENTED OUT UNTIL READY) */}
+        {/*
+        <div className="mt-8 flex flex-wrap gap-6 opacity-80">
+          <img src="/trust/client1.png" alt="Client Logo" className="h-10" />
+          <img src="/trust/client2.png" alt="Client Logo" className="h-10" />
+          <img src="/trust/client3.png" alt="Client Logo" className="h-10" />
+          <img src="/trust/client4.png" alt="Client Logo" className="h-10" />
+        </div>
+        */}
       </motion.div>
-      <div className="w-[40%] flex flex-col justify-end items-end">
-        <motion.img
-          initial="hidden"
-          whileInView="visible"
-          variants={zoomInVariants}
-        />
-      </div>
     </section>
   );
 };

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
 import project1 from "../assets/project1.jpg";
 import project2 from "../assets/project2.jpg";
 import project3 from "../assets/project3.jpg";
@@ -11,7 +11,7 @@ import project5 from "../assets/project5.jpg";
 import project6 from "../assets/project6.jpg";
 import project7 from "../assets/project7.jpg";
 import project8 from "../assets/project8.jpg";
-import { slideUpVariants, zoomInVariants } from "./animation";
+import { slideUpVariants, zoomInVariants } from "../sections/animation";
 
 const projects = [
   {
