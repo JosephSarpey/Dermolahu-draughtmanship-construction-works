@@ -1,19 +1,25 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import { motion } from "framer-motion";
 import { slideUpVariants, zoomInVariants } from "./animation";
 import { useNavigate } from "react-router-dom";
 import aboutImage from "../assets/about.jpg";
-import { FaInfoCircle } from "react-icons/fa";
 
 const About = () => {
   const navigate = useNavigate();
 
   return (
-    <section
-      id="about"
-      className="w-[90%] lg:w-[80%] m-auto py-16 flex flex-col lg:flex-row-reverse items-center gap-14"
-    >
+    <section id="about" className="relative w-full py-20 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src={aboutImage}
+          className="w-full h-full object-cover"
+          alt="Construction background"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+
+      {/* Content Container */}
+      <div className="w-[90%] lg:w-[80%] m-auto flex flex-col lg:flex-row-reverse items-center gap-14 relative z-10">
       {/* Image */}
       <motion.div
         initial="hidden"
@@ -45,7 +51,7 @@ const About = () => {
           surveying, and full project consultancy across residential, commercial, and industrial projects.
         </p>
 
-        <ul className="text-gray-200 text-lg leading-relaxed space-y-2">
+        <ul className="text-gray-200 text-lg leading-relaxed space-y-2 backdrop-blur-sm bg-black/30 p-6 rounded-xl">
           <li>• Architectural & structural drawings</li>
           <li>• Land surveying and cost estimation</li>
           <li>• Construction and project supervision</li>
@@ -55,13 +61,12 @@ const About = () => {
         <motion.button
           variants={zoomInVariants}
           onClick={() => navigate("/about")}
-          className="bg-turquoise text-black cursor-pointer px-10 py-3 font-semibold rounded-lg hover:brightness-110 transition-all w-fit mx-auto md:mx-0"
+          className="bg-turquoise/90 hover:bg-turquoise text-black cursor-pointer px-10 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 w-fit mx-auto md:mx-0"
         >
-
           Learn More About Us
-
         </motion.button>
       </motion.div>
+      </div>
     </section>
   );
 };

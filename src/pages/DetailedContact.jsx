@@ -1,13 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
-  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -16,224 +12,137 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+
 import Header from "../sections/Header";
 import Footer from "../sections/Footer";
 import { slideUpVariants, zoomInVariants } from "../sections/animation";
+import ContactForm from "../components/ContactForm";
+
+const bgImage =
+  "url('/assets/contact.jpeg')";
 
 const DetailedContact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [formStatus, setFormStatus] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add form validation logic here
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.message
-    ) {
-      setFormStatus("Please fill in all fields.");
-      return;
-    }
-    // Simulate form submission
-    setFormStatus("Submitting...");
-    setTimeout(() => {
-      setFormStatus(
-        "Thank you for your message. We will get back to you soon."
-      );
-    }, 2000);
-  };
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-black text-white relative">
       <Header />
-      <section className="w-[90%] m-auto mt-17 py-10 lg:w-[80%]">
-        <div className="flex flex-col justify-between items-start gap-12 lg:flex-row">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={slideUpVariants}
-            className="w-full flex flex-col justify-center items-start gap-3 lg:w-[60%] lg:gap-6"
-          >
-            <motion.h1
-              variants={slideUpVariants}
-              className="text-turquoise text-2xl"
-            >
-              CONTACT US
-            </motion.h1>
-            <motion.h1
-              variants={slideUpVariants}
-              className="text-black uppercase text-2xl font-semibold md:text-3xl lg:text-4xl"
-            >
-              REACH US FOR ANY INQUIRY
-            </motion.h1>
-            <div className="w-[120px] h-1.5 bg-turquoise"></div>
-            <p className="text-xl italic text-gray-600 mt-14">
-              Have questions or need assistance? Get in touch with us! Whether
-              you're looking for expert consultation, project estimates, or
-              general inquiries, our team is here to help. We strive to respond
-              promptly and provide the best solutions tailored to your needs.
-            </p>
-            <div className="mt-10">
-              <h2 className="text-2xl font-bold">Contact Information</h2>
-              <p className="text-lg mt-4 flex items-center">
-                <FontAwesomeIcon
-                  icon={faMapMarkerAlt}
-                  className="mr-2 text-turquoise"
-                />
-                Address: Agona nkwanta (damtse junction)
-              </p>
-              <p className="text-lg mt-4 flex items-center">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  className="mr-2 text-turquoise"
-                />
-                Phone: 0249308701/ 0508930080
-              </p>
-              <p className="text-lg mt-4 flex items-center">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="mr-2 text-turquoise"
-                />
-                Email: Demolahu.const@gmail.com
-              </p>
-            </div>
-            <div className="mt-10">
-              <h2 className="text-2xl font-bold">Follow Us</h2>
-              <div className="flex mt-4 gap-4">
-                <a
-                  href="https://www.facebook.com/share/r/19xwCNKL9j/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="text-2xl text-turquoise hover:text-black"
-                  />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faTwitter}
-                    className="text-2xl text-turquoise hover:text-black"
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/demolahu_engineering.kenjack?utm_source=qr&igsh=anBoeTVlZW1lejd1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className="text-2xl text-turquoise hover:text-black"
-                  />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className="text-2xl text-turquoise hover:text-black"
-                  />
-                </a>
-                <a
-                  href="https://wa.me/+233249308701"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faWhatsapp}
-                    className="text-2xl text-turquoise hover:text-black"
-                  />
-                </a>
-              </div>
-            </div>
-          </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={slideUpVariants}
-            className="w-full flex flex-col justify-center items-start lg:w-[40%] lg:gap-6"
-          >
-            <motion.form
+      {/* Background with overlay + spotlight + moving texture */}
+      <section
+        className="relative py-28 px-6 lg:px-0"
+        style={{
+          backgroundImage: `${bgImage}`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* Spotlight gradient */}
+        <div className="absolute inset-0 bg-gradient-radial from-white/10 via-transparent to-transparent pointer-events-none"></div>
+
+        {/* Subtle moving background texture */}
+        <div className="absolute inset-0 opacity-[0.13] animate-[moveBg_18s_linear_infinite] bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]"></div>
+
+        <div className="relative max-w-6xl w-[90%] m-auto lg:w-[80%] z-10">
+          <div className="flex flex-col lg:flex-row justify-between gap-16">
+
+            {/* LEFT → Text + info */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={slideUpVariants}
+              className="w-full lg:w-[55%] space-y-10"
+            >
+              <div>
+                <h1 className="text-turquoise text-xl font-semibold tracking-wide">
+                  CONTACT US
+                </h1>
+
+                <h2 className="mt-3 text-4xl lg:text-5xl font-bold leading-tight text-white">
+                  Let’s Talk About Your Project
+                </h2>
+
+                <div className="w-[120px] h-1.5 bg-turquoise mt-4"></div>
+
+                <p className="text-lg text-gray-300 mt-8 leading-relaxed">
+                  We&apos;re here to answer your questions, discuss your project, or schedule a consultation.
+                  Expect timely responses and professional communication from our team.
+                </p>
+              </div>
+
+              {/* Contact info */}
+              <div>
+                <h3 className="text-2xl font-semibold text-white">Contact Information</h3>
+
+                <div className="mt-6 space-y-4">
+                  <p className="flex items-center text-lg text-gray-300">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 text-turquoise" />
+                    Agona Nkwanta (Damtse Junction)
+                  </p>
+
+                  <p className="flex items-center text-lg text-gray-300">
+                    <FontAwesomeIcon icon={faPhone} className="mr-3 text-turquoise" />
+                    0249308701 / 0508930080
+                  </p>
+
+                  <p className="flex items-center text-lg text-gray-300">
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-3 text-turquoise" />
+                    Demolahu.const@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              {/* Socials */}
+              <div>
+                <h3 className="text-2xl font-semibold">Follow Us</h3>
+                <div className="flex gap-5 mt-4">
+                  {[ 
+                    [faFacebook, "https://www.facebook.com/share/r/19xwCNKL9j/"],
+                    [faTwitter, "https://twitter.com"],
+                    [faInstagram, "https://www.instagram.com/demolahu_engineering.kenjack?utm_source=qr"],
+                    [faLinkedin, "https://linkedin.com"],
+                    [faWhatsapp, "https://wa.me/+233249308701"],
+                  ].map(([icon, link], idx) => (
+                    <a key={idx} href={link} target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon
+                        icon={icon}
+                        className="text-2xl text-turquoise hover:text-white transition duration-200"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* RIGHT → Glassmorphism form */}
+            <motion.div
               initial="hidden"
               whileInView="visible"
               variants={zoomInVariants}
-              className="flex flex-col justify-center items-start gap-6 w-full"
-              onSubmit={handleSubmit}
+              className="w-full lg:w-[45%]"
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter Full Name"
-                className="px-6 py-3 border-2 border-black text-black rounded-lg w-full"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter Email"
-                className="px-6 py-3 border-2 border-black text-black rounded-lg w-full"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <input
-                type="number"
-                name="phone"
-                placeholder="Enter Mobile Number"
-                className="px-6 py-3 border-2 border-black text-black rounded-lg w-full"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-              <textarea
-                name="message"
-                placeholder="Enter Your Message"
-                rows="4"
-                className="px-6 py-3 border-2 border-black text-black rounded-lg w-full"
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-              <motion.button
-                variants={zoomInVariants}
-                className="bg-turquoise hover:bg-black hover:text-white px-10 py-4 text-black font-bold rounded-lg w-full flex items-center justify-center gap-2"
-                type="submit"
-              >
-                <FontAwesomeIcon icon={faPaperPlane} />
-                SUBMIT
-              </motion.button>
-              {formStatus && <p className="mt-4 text-red-500">{formStatus}</p>}
+              <ContactForm />
+            </motion.div>
 
-              <p className="text-m text-gray-600 mt-4">
-                We respect your privacy. Your information is safe and will never
-                be shared. By submitting this form, you agree to our terms and
-                conditions. We would love to hear from you, our cherished
-                customer.
-              </p>
-            </motion.form>
-          </motion.div>
+          </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
 };
 
 export default DetailedContact;
+
+/* Animation for moving texture */
+<style>
+{`
+@keyframes moveBg {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 1000px 1000px; }
+}
+`}
+</style>

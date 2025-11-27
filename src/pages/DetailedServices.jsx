@@ -288,7 +288,7 @@ const DetailedServicesPage = () => {
                             Our engineering team is prepared to bring your ideas to life with precision.
                         </p>
                         <a
-                            href="/contact"
+                            href="/booking"
                             className="inline-block mt-6 px-10 py-3 bg-turquoise text-black font-semibold rounded-full 
               hover:bg-white transition"
                         >

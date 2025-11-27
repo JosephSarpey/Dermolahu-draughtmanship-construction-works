@@ -82,7 +82,7 @@ const Contact = () => {
               <motion.div variants={slideUpVariants} className="w-full sm:w-auto">
                 <Link
                   to="/contact"
-                  className="border border-turquoise text-turquoise hover:bg-turquoise hover:text-black font-semibold px-10 py-4 rounded-lg w-full sm:w-fit transition-all block text-center"
+                  className="border-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-black font-semibold px-10 py-4 rounded-lg w-full sm:w-fit transition-all block text-center"
                 >
                   Request A Quote
                 </Link>

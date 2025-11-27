@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
 import About from './sections/About'

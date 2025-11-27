@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import {
   FaArrowUp,
   FaFacebook,
@@ -9,6 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo-cropped.jpg";
 
 const Footer = () => {
   const scrollTop = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="relative text-white px-8 pt-20 pb-10"
+        className="relative text-white px-8 pt-10 pb-10"
         style={{
           backgroundImage: "url('/assets/footer-bg.jpg')",
           backgroundSize: "cover",
@@ -35,17 +34,19 @@ const Footer = () => {
           {/* About */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img 
-                src="/assets/logo-cropped.jpg" 
-                alt="Demolahu Draughtsmanship & Construction" 
-                className="h-16 w-16 rounded-full border-2 border-turquoise"
-              />
-              <div>
-                <h1 className="text-2xl font-bold text-white">
-                  Demolahu <span className="text-turquoise">Draughtsmanship</span>
-                </h1>
-                <p className="text-sm text-gray-300">& Construction Ltd</p>
-              </div>
+              <img
+                          src={logo}
+                          alt="Logo"
+                          className="h-10 w-10 rounded-full shadow-lg"
+                        />
+                        <div className="flex flex-col font-bold font-rubik leading-tight">
+                          <h1 className="text-xl text-white">
+                            Demolahu <span className="text-turquoise">Draughtsmanship</span>
+                          </h1>
+                          <h2 className="text-lg text-turquoise -mt-1">
+                            & Construction Ltd
+                          </h2>
+                        </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
               DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION WORKS delivers reliable,

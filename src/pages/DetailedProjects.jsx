@@ -3,130 +3,105 @@ import React from "react";
 import { motion } from "framer-motion";
 import Header from "../sections/Header";
 import Footer from "../sections/Footer";
-import project1 from "../assets/project1.jpg";
-import project2 from "../assets/project2.jpg";
-import project3 from "../assets/project3.jpg";
-import project4 from "../assets/project4.jpg";
-import project5 from "../assets/project5.jpg";
-import project6 from "../assets/project6.jpg";
-import project7 from "../assets/project7.jpg";
-import project8 from "../assets/project8.jpg";
+import projects from "../data/projects";
 import { slideUpVariants, zoomInVariants } from "../sections/animation";
-
-const projects = [
-  {
-    id: 1,
-    image: project1,
-    title: "Modern Residential Building",
-    description:
-      "This state-of-the-art residential building features contemporary design elements and sustainable architecture. It offers a blend of luxury and eco-friendliness, with energy-efficient systems, green spaces, and modern amenities that cater to the needs of urban dwellers.",
-  },
-  {
-    id: 2,
-    image: project2,
-    title: "Urban Office Complex",
-    description:
-      "Located in the heart of the city, this cutting-edge office complex is designed for maximum productivity and comfort. It boasts open-plan workspaces, advanced technological infrastructure, and a variety of amenities including cafes, fitness centers, and collaborative zones to foster innovation and teamwork.",
-  },
-  {
-    id: 3,
-    image: project3,
-    title: "Luxury Apartment",
-    description:
-      "This luxurious apartment complex offers premium amenities and stunning city views. Each unit is designed with high-end finishes, spacious layouts, and floor-to-ceiling windows. Residents can enjoy exclusive access to a rooftop pool, concierge services, and a private fitness center.",
-  },
-  {
-    id: 4,
-    image: project4,
-    title: "Eco-Friendly Housing Plan",
-    description:
-      "Focused on sustainability and green living, this eco-friendly housing project incorporates renewable energy sources, water conservation systems, and sustainable building materials. The community features green roofs, community gardens, and ample green spaces to promote a healthy and sustainable lifestyle.",
-  },
-  {
-    id: 5,
-    image: project5,
-    title: "Commercial Plaza",
-    description:
-      "This bustling commercial plaza is a hub of activity, offering a variety of retail and dining options. The plaza is designed with pedestrian-friendly walkways, outdoor seating areas, and ample parking. It serves as a vibrant community space where people can shop, dine, and socialize.",
-  },
-  {
-    id: 6,
-    image: project6,
-    title: "Modern Villa",
-    description:
-      "This modern villa features sleek design and high-end finishes, perfect for luxury living. The villa includes spacious living areas, a gourmet kitchen, and a private outdoor pool. The design emphasizes indoor-outdoor living, with large glass doors that open to beautifully landscaped gardens.",
-  },
-  {
-    id: 7,
-    image: project7,
-    title: "Suburban Housing Development",
-    description:
-      "This suburban housing development offers spacious homes and family-friendly amenities. The development includes parks, playgrounds, and community centers, providing a safe and welcoming environment for families. Each home is designed with modern conveniences and ample space for comfortable living.",
-  },
-  {
-    id: 8,
-    image: project8,
-    title: "High-Rise Condominium",
-    description:
-      "This high-rise condominium offers panoramic views and top-notch facilities. Residents can enjoy luxurious amenities such as a rooftop terrace, fitness center, and concierge services. The units are designed with modern finishes and smart home technology, providing a sophisticated urban living experience.",
-  },
-];
 
 const DetailedProjects = () => {
   return (
-    <div className="w-full">
-      <Header />
-      <section className="w-[90%] m-auto py-10 mt-17 lg:w-full">
-        <motion.div
+    <div className="relative w-full min-h-screen text-gray-200">
+      {/* Full Background Image */}
+      <div className="fixed inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80"
+          className="w-full h-full object-cover"
+          alt="Construction background"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+      
+      <div className="relative z-10">
+        <Header />
+
+        {/* Hero Title */}
+        <section className="relative w-full h-[40vh] flex items-center justify-center">
+          <motion.h1
+            variants={slideUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-4xl md:text-5xl font-bold text-white text-center px-4"
+          >
+            Our Completed Projects
+          </motion.h1>
+        </section>
+
+      {/* Projects Grid */}
+      <section className="w-[90%] mx-auto py-10 backdrop-blur-sm bg-black/30 rounded-2xl my-10 p-6">
+        <motion.h2
+          variants={slideUpVariants}
           initial="hidden"
           whileInView="visible"
-          variants={slideUpVariants}
-          className="m-auto flex flex-col justify-between items-center gap-5 md:px-10"
+          viewport={{ once: true }}
+          className="text-3xl font-semibold text-center mb-12"
         >
-          <motion.h1
-            variants={slideUpVariants}
-            className="text-turquoise text-2xl"
-          >
-            OUR PROJECTS
-          </motion.h1>
-          <motion.h1
-            variants={slideUpVariants}
-            className="text-white uppercase text-2xl font-semibold text-center md:text-3xl"
-          >
-            SOME OF OUR PROJECTS
-          </motion.h1>
-          <motion.div
-            variants={slideUpVariants}
-            className="w-[120px] h-1.5 bg-turquoise"
-          ></motion.div>
+          Explore Our Work
+        </motion.h2>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={zoomInVariants}
-            className="w-full m-auto mt-7 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8"
-          >
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={zoomInVariants}
-                className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
-              >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={zoomInVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-xl overflow-hidden
+                         transform transition-transform duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-2xl"
+              onClick={() => (window.location.href = `/project/${project.id}`)}
+            >
+              <div className="w-full h-56 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-60 w-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover transform transition duration-500 hover:scale-110"
                 />
-                <div className="p-4 transition-transform duration-300 hover:scale-110">
-                  <h2 className="text-lg font-semibold">{project.title}</h2>
-                  <p className="text-sm text-gray-600">{project.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                <p className="text-gray-400 mt-2 text-sm line-clamp-3">
+                  {project.description}
+                </p>
+                <button className="mt-4 text-turquoise font-medium">
+                  View Details →
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
+
+      {/* CTA */}
+      <section className="w-full py-20 text-center mt-20">
+        <div className="max-w-4xl mx-auto bg-black/40 backdrop-blur-md rounded-2xl p-10 border border-white/10 shadow-2xl">
+          <h2 className="text-3xl font-bold text-white">Let’s Build Your Dream Project</h2>
+          <p className="mt-4 text-gray-300 text-sm w-[75%] md:w-[55%] mx-auto leading-relaxed">
+            From architectural planning to premium construction solutions, our team
+            delivers high-quality results that exceed expectations. Talk to us today
+            and bring your vision to life.
+          </p>
+
+          <a
+            href="/contact"
+            className="inline-block mt-8 bg-turquoise/90 hover:bg-turquoise text-black font-medium 
+                      px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Contact Us Today
+          </a>
+        </div>
+      </section>
+
       <Footer />
+      </div>
     </div>
   );
 };

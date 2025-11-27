@@ -30,13 +30,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { link: "Home", path: "/" },
     { link: "About", path: "/about" },
     { link: "Services", path: "/services" },
     { link: "Projects", path: "/projects" },
     { link: "Contact", path: "/contact" },
     { link: "Blog", path: "/blog" },
-    { link: "Booking", path: "/booking" },
+    { link: "Get A Quote", path: "/booking" },
   ];
 
   return (
@@ -47,7 +46,7 @@ const Header = () => {
     >
       <nav
         className="
-          w-full flex justify-between items-center px-6 py-3
+          w-full flex justify-between items-center px-6 py-2
           backdrop-blur-xl bg-white/30
           shadow-[0_8px_30px_rgba(0,0,0,0.08)]
           border-b border-white/20
@@ -58,11 +57,11 @@ const Header = () => {
           <img
             src={logo}
             alt="Logo"
-            className="h-14 w-14 rounded-full shadow-lg"
+            className="h-8 w-8 rounded-full shadow-lg"
           />
           <div className="flex flex-col font-bold font-rubik leading-tight">
-            <h1 className="text-xl text-black">
-              Demolahu <span className="text-turquoise">Draughtsmanship</span>
+            <h1 className="text-lg text-black">
+              Dermolahu <span className="text-turquoise">Draughtsmanship</span>
             </h1>
             <h2 className="text-lg text-turquoise -mt-1">
               & Construction Ltd
@@ -76,10 +75,12 @@ const Header = () => {
             <li key={path}>
               <Link
                 to={path}
-                className="
-                  relative px-4 py-2 text-black transition-all
-                  hover:text-turquoise
-                "
+                className={`
+                  relative px-4 py-2 transition-all
+                  ${link === 'Get A Quote' 
+                    ? 'bg-turquoise text-white px-6 py-2 rounded-full font-medium hover:bg-turquoise/90 shadow-md hover:shadow-lg transition-all' 
+                    : 'text-black hover:text-turquoise'}
+                `}
               >
                 {link}
 
@@ -125,12 +126,15 @@ const Header = () => {
                   <Link
                     to={path}
                     onClick={closeMenu}
-                    className="
+                    className={`
                       block text-center w-full py-3 
-                      font-semibold text-black rounded-xl
-                      bg-white/30 hover:bg-turquoise hover:text-white
-                      backdrop-blur-md transition-all
-                    "
+                      font-semibold rounded-xl
+                      transition-all
+                      ${link === 'Get A Quote' 
+                        ? 'bg-turquoise text-white hover:bg-turquoise/90 shadow-md' 
+                        : 'text-black bg-white hover:bg-turquoise hover:text-white'}
+                      backdrop-blur-md
+                    `}
                   >
                     {link}
                   </Link>
