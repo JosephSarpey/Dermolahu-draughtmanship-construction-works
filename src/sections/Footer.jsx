@@ -49,7 +49,7 @@ const Footer = () => {
                         </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION WORKS delivers reliable,
+              DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION WORKS delivers reliable,
               high-standard construction services with unmatched precision,
               expertise, and commitment.
             </p>
@@ -115,7 +115,7 @@ const Footer = () => {
           <hr className="my-10 border-gray-700" />
 
           <p className="text-center text-sm text-gray-400">
-            &copy; 2025, DERMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD. All Rights Reserved.
+            &copy; 2025, DEMOLAHU DRAUGHTSMANSHIP & CONSTRUCTION LTD. All Rights Reserved.
           </p>
 
           <p className="text-center text-xs italic mt-2 text-gray-500">

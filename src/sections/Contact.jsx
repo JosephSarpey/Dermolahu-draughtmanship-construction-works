@@ -72,7 +72,7 @@ const Contact = () => {
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
               <motion.a
-                href="mailto:example@gmail.com"
+                href="/contact"
                 variants={slideUpVariants}
                 className="bg-turquoise hover:bg-black hover:text-white text-black font-bold px-10 py-4 rounded-lg w-full sm:w-fit text-center transition-all"
               >
@@ -81,8 +81,8 @@ const Contact = () => {
 
               <motion.div variants={slideUpVariants} className="w-full sm:w-auto">
                 <Link
-                  to="/contact"
-                  className="border-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-black font-semibold px-10 py-4 rounded-lg w-full sm:w-fit transition-all block text-center"
+                  to="/blog"
+                  className="border-2 border-turquoise text-turquoise hover:brightness-110 font-semibold px-10 py-4 rounded-lg w-full sm:w-fit transition-all block text-center"
                 >
                   Request A Quote
                 </Link>

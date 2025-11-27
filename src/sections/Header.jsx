@@ -61,7 +61,7 @@ const Header = () => {
           />
           <div className="flex flex-col font-bold font-rubik leading-tight">
             <h1 className="text-lg text-black">
-              Dermolahu <span className="text-turquoise">Draughtsmanship</span>
+              Demolahu <span className="text-turquoise">Draughtsmanship</span>
             </h1>
             <h2 className="text-lg text-turquoise -mt-1">
               & Construction Ltd
